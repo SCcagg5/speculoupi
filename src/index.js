@@ -1,5 +1,5 @@
-import {getRoads} from "./roads";
-import {getPrices} from "./prices";
+import {getRoads} from "./roads.js";
+import {getPrices} from "./prices.js";
 
 const main = () => {
     console.log('Hello World!');
