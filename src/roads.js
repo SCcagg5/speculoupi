@@ -1,5 +1,5 @@
-const { Fetcher, Token, TokenAmount } = require('@uniswap/v3-sdk');
-const { ethers } = require('ethers');
+import { Fetcher, Token, TokenAmount } from '@uniswap/v3-sdk';
+import { ethers } from 'ethers';
 
 const ethereumRpcUrl = "?";
 const chainId = "?";
@@ -10,7 +10,7 @@ if (!ethereumRpcUrl || isNaN(chainId)) {
   process.exit(1);
 }
 
-async function getSwappableTokens(tokenAddress) {
+export const getSwappableTokens = async (tokenAddress) => {
   const provider = new ethers.providers.JsonRpcProvider(ethereumRpcUrl); // Utilisez l'URL du nœud Ethereum depuis la variable d'environnement
 
   try {
