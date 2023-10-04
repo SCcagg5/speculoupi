@@ -1,5 +1,5 @@
-const { Fetcher, Token, TokenAmount } = require('@uniswap/v3-sdk');
-const { ethers } = require('ethers');
+import { Fetcher, Token, TokenAmount } from '@uniswap/v3-sdk';
+import { ethers } from 'ethers';
 
 const ethereumRpcUrl = "?";
 const chainId = "?";
