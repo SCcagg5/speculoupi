@@ -1,0 +1,14 @@
+version: '3'
+
+networks:
+  bridge:
+
+services:
+  node16-app:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./src/:/app/:ro
+    networks:
+      - bridge
