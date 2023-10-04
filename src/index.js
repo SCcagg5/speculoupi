@@ -1,4 +1,4 @@
-import {getRoads} from "./roads.js";
+import {getSwappableTokens} from "./roads.js";
 import {getPrices} from "./prices.js";
 
 const main = () => {
