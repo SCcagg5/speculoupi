@@ -6,7 +6,7 @@ const main = () => {
 
     const prices = getPrices();
 
-    const roads = getRoads(prices);
+    const roads = getSwappableTokens(prices);
 }
 
 main();

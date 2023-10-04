@@ -1,8 +1,10 @@
-import { Fetcher, Token, TokenAmount } from '@uniswap/v3-sdk';
+import pkg from '@uniswap/v3-sdk';
+const { Fetcher, Token, TokenAmount } = pkg;
 import { ethers } from 'ethers';
+import config from "./config/config.js";
 
-const ethereumRpcUrl = "?";
-const chainId = "?";
+const ethereumRpcUrl = config.polygon.jsonRpc;
+const chainId = config.polygon.chainId;
 const tokenAddress = '?';
 
 if (!ethereumRpcUrl || isNaN(chainId)) {
@@ -11,7 +13,7 @@ if (!ethereumRpcUrl || isNaN(chainId)) {
 }
 
 export const getSwappableTokens = async (tokenAddress) => {
-  const provider = new ethers.providers.JsonRpcProvider(ethereumRpcUrl); // Utilisez l'URL du nœud Ethereum depuis la variable d'environnement
+  const provider = new ethers.JsonRpcProvider(ethereumRpcUrl); // Utilisez l'URL du nœud Ethereum depuis la variable d'environnement
 
   try {
     // Créez un objet Token pour le token dont vous voulez connaître les paires
