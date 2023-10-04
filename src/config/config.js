@@ -1,7 +1,7 @@
 export default {
     polygon: {
         chainId: 137,
-        jsonRpc: '',
+        jsonRpc: 'https://rpc.ankr.com/polygon',
         supportedAaveV3Tokens: [{
             abbreviation: "AAVE",
             contactAddress: "0xd6df932a45c0f255f85145f286ea0b292b21c90b"
